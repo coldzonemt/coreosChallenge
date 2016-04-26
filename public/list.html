@@ -1,0 +1,17 @@
+<div>
+  <h1>List Github Star Count</h2>
+  <div>Enter a Github username to lookup</div>
+  <input type="text" ng-model="ghUsername"/>
+  <button ng-click="submit()">submit</button>
+
+  <hr/>
+
+  <div class="totals" >
+    <div style="float:left"><b>USER:</b> {{ghUsername}}</div>
+    <div style="float:right"><b>TOTAL STARS:</b> {{total}}</div>
+  </div>
+  <div class="item" ng-repeat="i in items">
+    <div style="float:left">{{i.name}}</div>
+    <div style="float:right">{{i.stargazers_count}}</div>
+  </div>
+</div>

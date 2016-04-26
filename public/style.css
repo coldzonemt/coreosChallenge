@@ -1,0 +1,42 @@
+html,
+body {
+	  background-color: #efefef;
+	  height: 100%;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+	wlist-style: none;
+}
+#view-container {
+  background-color: #fff;
+  padding: 20px;
+  margin: 0 auto;
+  width: 600px;
+}
+
+#nav {
+  background-color: #ccc;
+}
+#nav > ul {
+    overflow: hidden;
+}
+#nav > ul > li {
+  float: left;
+  display: block;
+  padding: 10px;
+}
+body #title {
+  padding: 20px;
+  background-color: aliceblue;
+}
+
+body div.totals,
+body div.item {
+    overflow: hidden;
+    padding: 10px;
+}
+
+body div.totals {background-color: aliceblue;}

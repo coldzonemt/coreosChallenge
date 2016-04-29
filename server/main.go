@@ -1,3 +1,4 @@
+
 package main
 
 import (
@@ -111,9 +112,9 @@ func main() {
 		}
 	})
 
-	mux.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("./public"))))
+	mux.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("../client"))))
 	mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		http.ServeFile(w, r, "./public/index.html")
+		http.ServeFile(w, r, "../client/index.html")
 	})
 
 	(&http.Server{

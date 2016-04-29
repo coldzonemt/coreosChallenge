@@ -1,0 +1,26 @@
+<html lang="en" ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title>Star Lister</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.js"></script>
+    <script src="./app/app.js"></script>
+    <base href="/">
+  </head>
+
+  <body>
+    
+    <div id="title">This app lists all the stars for any Github user</div>
+    <div id="nav">
+      <ul>
+        <li><a href="/">Login</a></li>
+        <li><a href="/list">List</a></li>
+      </ul>
+    </div>
+    <div id="view-container" ng-view></div>
+
+  </body>
+</html>

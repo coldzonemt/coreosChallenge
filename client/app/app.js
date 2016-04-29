@@ -1,20 +1,23 @@
 angular.module('app', [
-  'ngRoute',
+  'ngRoute', //use ui-route instead of ngRoute
+  //include other modules to be used here
 ])
+//config is run before the application is spun up. Routes need to be in place first. 
 .config(function($routeProvider, $locationProvider) {
   'use strict';
   $locationProvider.html5Mode(true);
   $routeProvider
     .when('/', {
       controller: 'LoginPageCtrl',
-      templateUrl: '/static/login.html',
+      templateUrl: '/login.html',
       title: 'Login',
     })
     .when('/list', {
       controller: 'ListPageCtrl',
-      templateUrl: '/static/list.html',
+      templateUrl: '/list.html',
       title: 'List',
     });
+    //consider using "$urlRouterProvider.otherwise('/')" here for any other address that is typed in
 })
 .controller('LoginPageCtrl', function($scope, $http, $location, $rootScope) {
   $scope.user = {
